@@ -7,8 +7,10 @@ function App() {
   return (
     <SApp>
       <Header />
-      <Carousel />
-      <main>Wall</main>
+      <main>
+        <Carousel />
+        <section>Wall of tiles</section>
+      </main>
       <Footer />
     </SApp>
   );
