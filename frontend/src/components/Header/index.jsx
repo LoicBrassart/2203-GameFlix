@@ -12,6 +12,7 @@ export default function NavBar() {
           <li>Outils</li>
         </ul>
       </nav>
+      <img src="" alt="" />
     </SNavBar>
   );
 }
