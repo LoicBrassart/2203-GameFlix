@@ -79,6 +79,7 @@ https://bloguxdesigner.fr/palette-de-couleurs/
 
 https://www.fontpair.co/
 https://type-scale.com/
+https://fontjoy.com/
 
 ### Design
 
@@ -90,3 +91,4 @@ https://salon.thefamily.co/lets-find-your-swag-69f9d8f0c641
 ### Tooling
 
 - plugin SBook: https://www.chromatic.com/
+- Liste de ressources: https://www.toools.design
