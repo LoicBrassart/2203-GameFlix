@@ -1,4 +1,5 @@
 import Carousel from "@components/Carousel";
+import ThumbWall from "@components/ThumbWall";
 import Footer from "@components/Footer";
 import Header from "@components/Header";
 import SApp from "./style";
@@ -9,7 +10,7 @@ function App() {
       <Header />
       <main>
         <Carousel />
-        <section>Wall of tiles</section>
+        <ThumbWall />
       </main>
       <Footer />
     </SApp>
