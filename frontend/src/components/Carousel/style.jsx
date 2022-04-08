@@ -1,11 +1,13 @@
 import styled from "styled-components";
 
 export default styled.section`
-  .slide {
-    box-sizing: border-box;
-    border: 2px dotted yellowgreen;
+  padding-top: 1em;
 
-    & > * {
+  .slide {
+    aspect-ratio: 16/9;
+    overflow: hidden;
+
+    & > img {
       width: 100%;
     }
   }
