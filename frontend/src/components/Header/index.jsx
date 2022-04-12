@@ -1,5 +1,5 @@
-import SNavBar from "./style";
 import Toggle from "@components/Toggle";
+import SNavBar from "./style";
 
 export default function NavBar() {
   return (

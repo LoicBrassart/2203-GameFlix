@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import img1 from "@assets/carousel/01.jpg";
 
 export default styled.section`
   & > div {
@@ -51,8 +50,6 @@ export default styled.section`
 
       article {
         height: 100%;
-        background-image: url(${img1});
-        background-size: cover;
         overflow: hidden;
 
         img {

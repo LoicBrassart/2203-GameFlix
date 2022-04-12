@@ -1,33 +1,48 @@
-import { events, games } from "../../data";
+import axios from "axios";
+import { useState, useEffect } from "react";
+import { events } from "../../data";
 import SThumbWall from "./style";
 
 export default function ThumbWall() {
+  const [games, setGames] = useState([]);
+  useEffect(() => {
+    axios.get(`${import.meta.env.VITE_BACKEND_URL}/games`).then(({ data }) => {
+      setGames(data);
+    });
+  }, []);
+
   return (
     <SThumbWall>
       <div>
         <div className="card top-left">
-          <article>
-            <figure>
-              <img src={games[0].picture} alt={games[0].title} />
-              <figcaption>{games[0].title}</figcaption>
-            </figure>
-          </article>
+          {games[0] && (
+            <article>
+              <figure>
+                <img src={games[0].thumbUrl} alt={games[0].title} />
+                <figcaption>{games[0].title}</figcaption>
+              </figure>
+            </article>
+          )}
         </div>
         <div className="card top">
-          <article>
-            <figure>
-              <img src={games[1].picture} alt={games[1].title} />
-              <figcaption>{games[1].title}</figcaption>
-            </figure>
-          </article>
+          {games[1] && (
+            <article>
+              <figure>
+                <img src={games[1].thumbUrl} alt={games[1].title} />
+                <figcaption>{games[1].title}</figcaption>
+              </figure>
+            </article>
+          )}
         </div>
         <div className="card top-right">
-          <article>
-            <figure>
-              <img src={games[2].picture} alt={games[2].title} />
-              <figcaption>{games[2].title}</figcaption>
-            </figure>
-          </article>
+          {games[2] && (
+            <article>
+              <figure>
+                <img src={games[2].thumbUrl} alt={games[2].title} />
+                <figcaption>{games[2].title}</figcaption>
+              </figure>
+            </article>
+          )}{" "}
         </div>
         <div className="big card left">
           <article>
@@ -46,28 +61,34 @@ export default function ThumbWall() {
           </article>
         </div>
         <div className="card bottom">
-          <article>
-            <figure>
-              <img src={games[3].picture} alt={games[3].title} />
-              <figcaption>{games[3].title}</figcaption>
-            </figure>
-          </article>
+          {games[3] && (
+            <article>
+              <figure>
+                <img src={games[3].thumbUrl} alt={games[3].title} />
+                <figcaption>{games[3].title}</figcaption>
+              </figure>
+            </article>
+          )}
         </div>
         <div className="card bottom-left">
-          <article>
-            <figure>
-              <img src={games[4].picture} alt={games[4].title} />
-              <figcaption>{games[4].title}</figcaption>
-            </figure>
-          </article>
+          {games[4] && (
+            <article>
+              <figure>
+                <img src={games[4].thumbUrl} alt={games[4].title} />
+                <figcaption>{games[4].title}</figcaption>
+              </figure>
+            </article>
+          )}
         </div>
         <div className="card bottom-right">
-          <article>
-            <figure>
-              <img src={games[5].picture} alt={games[5].title} />
-              <figcaption>{games[5].title}</figcaption>
-            </figure>
-          </article>
+          {games[5] && (
+            <article>
+              <figure>
+                <img src={games[5].thumbUrl} alt={games[5].title} />
+                <figcaption>{games[5].title}</figcaption>
+              </figure>
+            </article>
+          )}
         </div>
       </div>
     </SThumbWall>
