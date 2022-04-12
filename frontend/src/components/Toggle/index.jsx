@@ -1,7 +1,7 @@
-import SToggle from "./style";
-import imgD6 from "@assets/d6.png";
-import imgD20 from "@assets/d20.png";
 import { useState } from "react";
+import imgD6 from "@assets/d6.svg";
+import imgD20 from "@assets/d20.svg";
+import SToggle from "./style";
 
 export default function Toggle() {
   const [isRPG, setRPG] = useState(false);
