@@ -14,6 +14,7 @@ https://www.lythium.fr/
 http://www.etoiledujeu.fr/
 https://gaming.amazon.com/loot/legendsofruneterra?ingress=amzn&pageContext=cebf912a-0ab2-056b-4ee4-487240f3c85b&ref_=SM_LOU04_P3_CRWN
 https://www.leroliste.com/
+https://www.instant-gaming.com/fr/
 
 - Difficulté à choisir un thème spécifique à un univers: un thème orienté SF détonnera sur un jeu med-fan, et inversement -> choisir un thème neutre et agnostique de l'univers spécifique du jeu
   - MyLudo et Roll20 ont fait le choix du blanc-pas-fini
