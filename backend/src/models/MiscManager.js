@@ -1,6 +1,8 @@
 const AbstractManager = require("./AbstractManager");
 
 class MiscManager extends AbstractManager {
+  static table = "misc";
+
   constructor(connection, table) {
     super(connection, table);
     delete this.find;
