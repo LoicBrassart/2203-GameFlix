@@ -1,17 +1,20 @@
-import Carousel from "@components/Carousel";
-import ThumbWall from "@components/ThumbWall";
+import { Routes, Route } from "react-router-dom";
 import Footer from "@components/Footer";
 import Header from "@components/Header";
+import TotoPage from "@pages/TotoPage";
+import HomePage from "@pages/HomePage";
 import SApp from "./style";
 
 function App() {
   return (
     <SApp>
-      <Header />
       <main>
-        <Carousel />
-        <ThumbWall />
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/toto" element={<TotoPage />} />
+        </Routes>
       </main>
+      <Header />
       <Footer />
     </SApp>
   );

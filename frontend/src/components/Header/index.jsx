@@ -1,3 +1,4 @@
+import SearchBar from "@components/SearchBar";
 import Toggle from "@components/Toggle";
 import SNavBar from "./style";
 
@@ -14,6 +15,7 @@ export default function NavBar() {
           <li>Outils</li>
         </ul>
       </nav>
+      <SearchBar />
       <img src="" alt="" />
     </SNavBar>
   );
