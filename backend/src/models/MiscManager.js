@@ -1,25 +1,18 @@
 const AbstractManager = require("./AbstractManager");
 
 class MiscManager extends AbstractManager {
-  static table = "misc";
+  constructor(connection, table) {
+    super(connection, table);
+    delete this.find;
+    delete this.findAll;
+    delete this.delete;
+  }
 
   search(needle) {
     return this.connection.query(
       `select * from searchable where haystack like ?`,
       [`%${needle}%`]
     );
-  }
-
-  find(id) {
-    return null;
-  }
-
-  findAll() {
-    return null;
-  }
-
-  delete(id) {
-    return null;
   }
 }
 

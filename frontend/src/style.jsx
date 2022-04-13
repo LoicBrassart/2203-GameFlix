@@ -5,6 +5,7 @@ export default styled.div`
   min-height: 100vh;
 
   main {
+    margin-top: 5vh;
     min-height: 90vh;
     background: url("https://proxy.duckduckgo.com/iu/?u=https%3A%2F%2Ftse3.mm.bing.net%2Fth%3Fid%3DOIP.CDr_SlBrNymTKfbleckFYwHaE7%26pid%3DApi&f=1"),
       rgba(225, 225, 225, 0.75);
