@@ -5,6 +5,7 @@ import { Reset } from "styled-reset";
 import Footer from "@components/Footer";
 import Header from "@components/Header";
 import HomePage from "@pages/HomePage";
+import BaSPage from "@pages/BaSPage";
 import GlobalStyle from "./globalStyles";
 import SApp from "./style";
 
@@ -19,6 +20,7 @@ function App() {
         <main>
           <Routes>
             <Route path="/" element={<HomePage />} />
+            <Route path="/labo" element={<BaSPage />} />
           </Routes>
         </main>
         <Header />
