@@ -25,7 +25,7 @@ export default function ThemeBuilder() {
   };
 
   useEffect(() => {
-    let traits = [
+    const traits = [
       "Base",
       scopes[theme.scope],
       modes[theme.mode],
@@ -41,7 +41,7 @@ export default function ThemeBuilder() {
     <form>
       <fieldset>
         <legend>Build your theme</legend>
-        <label>
+        <label htmlFor="scope">
           <input
             name="scope"
             type="range"
@@ -52,7 +52,7 @@ export default function ThemeBuilder() {
           />
           <span>Scope: {scopes[theme.scope]}</span>
         </label>
-        <label>
+        <label htmlFor="mode">
           <input
             name="mode"
             type="range"
@@ -63,7 +63,7 @@ export default function ThemeBuilder() {
           />
           <span>Mode: {modes[theme.mode]}</span>
         </label>
-        <label>
+        <label htmlFor="spacing">
           <input
             name="spacing"
             type="range"
@@ -77,7 +77,7 @@ export default function ThemeBuilder() {
       </fieldset>
       <fieldset>
         <legend>Accessibility</legend>
-        <label>
+        <label htmlFor="colorBlind">
           <input
             name="colorBlind"
             type="checkbox"
@@ -86,7 +86,7 @@ export default function ThemeBuilder() {
           />
           <span>Colorblind</span>
         </label>
-        <label>
+        <label htmlFor="dyslexic">
           <input
             name="dyslexic"
             type="checkbox"
