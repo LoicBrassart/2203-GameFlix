@@ -4,6 +4,7 @@ import { useSelector } from "react-redux";
 import { Reset } from "styled-reset";
 import Footer from "@components/Footer";
 import Header from "@components/Header";
+import Modal from "@components/Modal";
 import HomePage from "@pages/HomePage";
 import BaSPage from "@pages/BaSPage";
 import GlobalStyle from "./globalStyles";
@@ -25,6 +26,10 @@ function App() {
         </main>
         <Header />
         <Footer />
+        <Modal title="Well...">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem
+          doloremque non fugiat autem expedita quam!
+        </Modal>
       </SApp>
     </ThemeProvider>
   );
