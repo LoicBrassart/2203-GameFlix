@@ -5,14 +5,14 @@ class GameManager extends AbstractManager {
 
   insert(item) {
     return this.connection.query(
-      `insert into ${GameManager.table} (title) values (?)`,
+      `insert into ${this.table} (title) values (?)`,
       [item.title]
     );
   }
 
   update(item) {
     return this.connection.query(
-      `update ${GameManager.table} set title = ? where id = ?`,
+      `update ${this.table} set title = ? where id = ?`,
       [item.title, item.id]
     );
   }

@@ -1,8 +1,9 @@
 import { combineReducers, createStore } from "redux";
 import theme from "./theme";
 import modal from "./modal";
+import auth from "./auth";
 
-const mainReducer = combineReducers({ theme, modal });
+const mainReducer = combineReducers({ theme, modal, auth });
 
 export default createStore(
   mainReducer,
