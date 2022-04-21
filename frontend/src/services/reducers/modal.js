@@ -1,5 +1,5 @@
 const initialState = {
-  show: true,
+  show: false,
 };
 
 export default (state = initialState, action) => {

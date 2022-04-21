@@ -1,10 +1,10 @@
 const passport = require("passport");
 const LocalStrategy = require("passport-local").Strategy;
-const JWTStrategy = require("passport-jwt").Strategy,
-  ExtractJwt = require("passport-jwt").ExtractJwt;
+const { Strategy: JWTStrategy, ExtractJwt } = require("passport-jwt");
 const bcrypt = require("bcrypt");
-const { JWT_SECRET } = process.env;
 const models = require("./models");
+
+const { JWT_SECRET } = process.env;
 
 passport.use(
   new LocalStrategy(
@@ -12,7 +12,7 @@ passport.use(
       usernameField: "mail",
       passwordField: "password",
     },
-    async (formMail, formPassword, done) => {
+    (formMail, formPassword, done) => {
       try {
         models.user.find(formMail).then(([[dbUser]]) => {
           if (!dbUser.id) return done(null, false, "Wrong username!");
@@ -27,6 +27,7 @@ passport.use(
         console.error(e);
         return done(e);
       }
+      return null;
     }
   )
 );
@@ -44,10 +45,10 @@ passport.use(
   )
 );
 
-passport.serializeUser(function (user, done) {
+passport.serializeUser((user, done) => {
   done(null, user);
 });
 
-passport.deserializeUser(function (user, done) {
+passport.deserializeUser((user, done) => {
   done(null, user);
 });

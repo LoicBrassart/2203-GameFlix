@@ -1,6 +1,7 @@
 const jwt = require("jsonwebtoken");
 const bcrypt = require("bcrypt");
 const models = require("../models");
+
 const { JWT_ROUNDS, JWT_SECRET } = process.env;
 
 class AuthController {

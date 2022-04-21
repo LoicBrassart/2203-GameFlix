@@ -1,5 +1,6 @@
 import SearchBar from "@components/SearchBar";
 import Toggle from "@components/Toggle";
+import Avatar from "@components/Avatar";
 import SNavBar from "./style";
 
 export default function NavBar() {
@@ -16,7 +17,7 @@ export default function NavBar() {
         </ul>
       </nav>
       <SearchBar />
-      <img src="" alt="" />
+      <Avatar />
     </SNavBar>
   );
 }

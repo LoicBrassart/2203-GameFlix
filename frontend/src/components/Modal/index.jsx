@@ -10,24 +10,25 @@ export default function Modal({ title, children, onCancel, onOK }) {
 
   const hClose = () => {
     dispatch({ type: "HIDE" });
-    onCancel();
+    if (onCancel) {
+      onCancel();
+    }
   };
   const hOK = () => {
     dispatch({ type: "HIDE" });
     onOK();
   };
+  const hKeydown = (evt) => {
+    if (evt.key === "Escape") {
+      hClose();
+    }
+  };
 
   useEffect(() => {
-    const handler = (evt) => {
-      if (evt.key === "Escape") {
-        hClose();
-      }
-    };
-
-    document.body.addEventListener("keydown", handler);
+    document.body.addEventListener("keydown", hKeydown);
 
     return () => {
-      document.body.removeEventListener("keydown", handler);
+      document.body.removeEventListener("keydown", hKeydown);
     };
   }, []);
 
@@ -42,7 +43,7 @@ export default function Modal({ title, children, onCancel, onOK }) {
         <div
           className="content"
           onClick={(evt) => evt.stopPropagation()}
-          onKeyDown={hClose}
+          onKeyDown={hKeydown}
         >
           <header>
             <h4>{title}</h4>
