@@ -7,7 +7,7 @@ import SFormAuth from "./style";
 export default function FormAuth() {
   const [formData, setFormData] = useState({
     hasAccount: true,
-    mail: "",
+    email: "",
     password: "",
     passwordBis: "",
   });
@@ -53,13 +53,13 @@ export default function FormAuth() {
         />
         Have an account already ?
       </label>
-      <label htmlFor="mail">
+      <label htmlFor="email">
         <span>E-mail</span>
         <input
-          name="mail"
+          name="email"
           type="email"
           onChange={hChange}
-          value={formData.mail}
+          value={formData.email}
         />
       </label>
       <label htmlFor="password">
