@@ -1,6 +1,5 @@
 const express = require("express");
 const path = require("path");
-
 const cors = require("cors");
 const passport = require("passport");
 
@@ -9,10 +8,18 @@ const passport = require("passport");
 const app = express();
 
 // use some application-level middlewares
+const whitelist = [process.env.FRONTEND_URL || "", process.env.ADMIN_URL || ""];
 app.use(
   cors({
-    origin: process.env.FRONTEND_URL ?? "http://localhost:3000",
+    origin(origin, callback) {
+      if (whitelist.includes(origin)) {
+        callback(null, true);
+      } else {
+        callback(new Error("Not allowed by CORS"));
+      }
+    },
     optionsSuccessStatus: 200,
+    credentials: true,
   })
 );
 

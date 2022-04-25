@@ -9,7 +9,7 @@ const { JWT_SECRET } = process.env;
 passport.use(
   new LocalStrategy(
     {
-      usernameField: "mail",
+      usernameField: "email",
       passwordField: "password",
     },
     (formMail, formPassword, done) => {
