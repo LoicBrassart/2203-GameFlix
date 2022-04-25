@@ -2,7 +2,7 @@ const models = require("../models");
 
 class GameController {
   static browse = (req, res) => {
-    models.game
+    models.boardGame
       .findAll()
       .then(([rows]) => {
         res.send(rows);
@@ -14,7 +14,7 @@ class GameController {
   };
 
   static read = (req, res) => {
-    models.game
+    models.boardGame
       .find(req.params.id)
       .then(([rows]) => {
         if (rows[0] == null) {
@@ -36,7 +36,7 @@ class GameController {
 
     game.id = parseInt(req.params.id, 10);
 
-    models.game
+    models.boardGame
       .update(game)
       .then(([result]) => {
         if (result.affectedRows === 0) {
@@ -56,7 +56,7 @@ class GameController {
 
     // TODO validations (length, format...)
 
-    models.game
+    models.boardGame
       .insert(game)
       .then(([result]) => {
         res.status(201).send({ ...game, id: result.insertId });
@@ -68,7 +68,7 @@ class GameController {
   };
 
   static delete = (req, res) => {
-    models.game
+    models.boardGame
       .delete(req.params.id)
       .then(() => {
         res.sendStatus(204);

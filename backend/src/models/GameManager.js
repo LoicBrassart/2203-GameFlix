@@ -1,7 +1,7 @@
 const AbstractManager = require("./AbstractManager");
 
 class GameManager extends AbstractManager {
-  static table = "game";
+  static table = "boardGame";
 
   insert(item) {
     return this.connection.query(

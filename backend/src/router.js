@@ -10,14 +10,6 @@ const {
 
 const router = express.Router();
 
-router.get("/games", GameController.browse);
-router.get("/games/:id", GameController.read);
-router.put("/games/:id", GameController.edit);
-router.post("/games", GameController.add);
-router.delete("/games/:id", GameController.delete);
-
-router.get("/search", MiscController.search);
-
 router.post("/auth/signup", AuthController.signup);
 router.post(
   "/auth/login",
@@ -25,6 +17,14 @@ router.post(
   AuthController.login
 );
 
+router.get("/search", MiscController.search);
+
+router.get("/boardGames", GameController.browse);
+router.get("/boardGames/:id", GameController.read);
+
 router.use(passport.authenticate("jwt")); // Auth Wall
+router.put("/boardGames/:id", GameController.edit);
+router.post("/boardGames", GameController.add);
+router.delete("/boardGames/:id", GameController.delete);
 
 module.exports = router;
