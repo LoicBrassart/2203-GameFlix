@@ -1,4 +1,4 @@
-import axios from 'axios';
+import axios from "axios";
 
 const api = axios.create({
   baseURL: import.meta.env.VITE_BACKEND_URL,
@@ -8,7 +8,7 @@ const api = axios.create({
 api.interceptors.request.use((config) => {
   return {
     ...config,
-    headers: { Authorization: `Bearer ${localStorage.getItem('token')}` },
+    headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
   };
 });
 
