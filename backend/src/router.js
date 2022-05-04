@@ -3,7 +3,8 @@ const passport = require("passport");
 require("./passportStrategies");
 
 const {
-  GameController,
+  BoardGameController,
+  CreatorController,
   MiscController,
   AuthController,
 } = require("./controllers");
@@ -19,12 +20,15 @@ router.post(
 
 router.get("/search", MiscController.search);
 
-router.get("/boardGames", GameController.browse);
-router.get("/boardGames/:id", GameController.read);
+router.get("/boardGames", BoardGameController.browse);
+router.get("/boardGames/:id", BoardGameController.read);
+
+router.get("/creators", CreatorController.browse);
+router.get("/creators/:id", CreatorController.read);
 
 router.use(passport.authenticate("jwt")); // Auth Wall
-router.put("/boardGames/:id", GameController.edit);
-router.post("/boardGames", GameController.add);
-router.delete("/boardGames/:id", GameController.delete);
+// router.put("/boardGames/:id", GameController.edit);
+// router.post("/boardGames", GameController.add);
+// router.delete("/boardGames/:id", GameController.delete);
 
 module.exports = router;

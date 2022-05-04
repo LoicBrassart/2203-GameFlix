@@ -12,7 +12,7 @@ const whitelist = [process.env.FRONTEND_URL || "", process.env.ADMIN_URL || ""];
 app.use(
   cors({
     origin(origin, callback) {
-      if (whitelist.includes(origin)) {
+      if (whitelist.includes(origin) || !origin) {
         callback(null, true);
       } else {
         callback(new Error("Not allowed by CORS"));

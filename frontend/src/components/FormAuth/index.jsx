@@ -47,6 +47,7 @@ export default function FormAuth() {
       <label htmlFor="hasAccount">
         <input
           name="hasAccount"
+          id="hasAccount"
           type="checkbox"
           onChange={hChange}
           checked={formData.hasAccount}
@@ -57,6 +58,7 @@ export default function FormAuth() {
         <span>E-mail</span>
         <input
           name="email"
+          id="email"
           type="email"
           onChange={hChange}
           value={formData.email}
@@ -66,6 +68,7 @@ export default function FormAuth() {
         <span>Password</span>
         <input
           name="password"
+          id="password"
           type="password"
           onChange={hChange}
           value={formData.password}
@@ -77,6 +80,7 @@ export default function FormAuth() {
             <span>Password (again)</span>
             <input
               name="passwordBis"
+              id="passwordBis"
               type="password"
               onChange={hChange}
               value={formData.passwordBis}
@@ -86,6 +90,7 @@ export default function FormAuth() {
             <span>Name</span>
             <input
               name="pseudo"
+              id="pseudo"
               type="text"
               onChange={hChange}
               value={formData.pseudo}
