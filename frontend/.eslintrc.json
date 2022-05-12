@@ -35,7 +35,8 @@
           "@assets": "./src/assets",
           "@components": "./src/components",
           "@pages": "./src/pages",
-          "@services": "./src/services"
+          "@services": "./src/services",
+          "@ui": "./src/ui"
         },
         "extensions": [".js", ".jsx"]
       }
