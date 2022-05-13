@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 const color = "orange";
+const outline = "red";
 const spaces = "1em";
 
 export default styled.button`
@@ -24,6 +25,9 @@ export default styled.button`
 
   &:disabled {
     opacity: 60%;
+  }
+  :focus {
+    outline: 2px solid ${outline};
   }
 
   img,
